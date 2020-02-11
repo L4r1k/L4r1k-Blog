@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: Rails.application.credentials.dig :mysql, :user
-  password: Rails.application.credentials.dig :mysql, :password
+  username: <%= Rails.application.credentials.dig(:mysql, :user) { raise "Make sure you have configured a mysql user" } %>
+  password: <%= Rails.application.credentials.dig(:mysql, :password) { raise "Make sure you have configured a mysql pass"} %>
   socket: /var/run/mysqld/mysqld.sock
 
 development:
