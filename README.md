@@ -1,2 +1,2 @@
-[![Build Status](https://travis-ci.com/L4r1k/L4r1k-Blog.svg?branch=master)](https://travis-ci.com/L4r1k/L4r1k-Blog)
+[![Build Status](https://travis-ci.com/L4r1k/L4r1k-Blog.svg?branch=master)](https://travis-ci.com/L4r1k/L4r1k-Blog) [![codecov](https://codecov.io/gh/L4r1k/L4r1k-Blog/branch/master/graph/badge.svg)](https://codecov.io/gh/L4r1k/L4r1k-Blog)  
 # L4r1k-Blog
