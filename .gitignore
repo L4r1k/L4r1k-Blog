@@ -32,3 +32,6 @@ yarn-debug.log*
 
 # Rubymine config
 /.idea
+
+# Coverage
+coverage

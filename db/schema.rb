@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2020_02_12_062057) do
     t.string "title"
     t.text "description"
     t.string "tags"
+    t.integer "status"
+    t.datetime "published_at"
     t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
