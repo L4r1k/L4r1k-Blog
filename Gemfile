@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'travis'
+gem 'codecov', require: false, group: :test
+gem 'simplecov', require: false, group: :test
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -51,7 +53,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'simplecov', require: false, group: :test
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
