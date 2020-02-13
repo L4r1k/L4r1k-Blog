@@ -7,3 +7,7 @@ script:
   - bundle exec rspec
 services:
   - mysql
+before_install:
+  - rm config/database.yml
+  - cp config/database.travis.yml config/database.yml
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS L4r1k_Blog_test;'
