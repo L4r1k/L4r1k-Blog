@@ -137,7 +137,8 @@ $(document).on('turbolinks:load', function() {
 
         function resize() {
             width = Math.min(window.innerWidth, document.documentElement.clientWidth);
-            height = window.innerHeight;
+            //height = window.innerHeight;
+            height = 335;
             headerOverlay.style.height = height+'px';
             canvas.width = width;
             canvas.height = height;
