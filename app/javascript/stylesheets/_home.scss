@@ -1,7 +1,3 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 @font-face {
   font-family: 'Orbitron';
   font-style: normal;
@@ -28,14 +24,6 @@ html,body {
   min-height: 100% !important;
   padding: 0;
 }
-
-/*
-.header {
-  height: 100%;
-  min-height: 100%;
-  text-align: center;
-}
-*/
 
 #landing-top {
   height: 335px;
@@ -65,7 +53,7 @@ html,body {
 // #large-header is used by animation code. height is set in JS
 .parallax-overlay {
   border-bottom: 1px solid #00e1ff;
-  background-color: rgba(8, 13, 19, 0.7);
+  background-color: rgba(8, 13, 19, 0.9);
   width: 100%;
   height: 100%;
   min-height: 100%;
@@ -88,7 +76,7 @@ html,body {
   height: 100%;
   z-index: 1;
   position: relative;
-  background-color: rgba(8, 13, 19, 0.7);
+  //background-color: rgba(8, 13, 19, 0.7);
 }
 
 .header-title {
@@ -127,12 +115,6 @@ html,body {
   border-color: white;
 }
 
-@media (max-width: 767px) {
-  .shrink {
-    font-size: 40px;
-  }
-}
-
 .section-box {
   border-bottom: 1px solid #00e1ff;
   background-color: #000000;
@@ -143,11 +125,6 @@ html,body {
   padding: 80px 0 30px 0;
   font-family: 'Orbitron', sans-serif;
   color: #00e1ff;
-}
-
-.twitch-btn {
-  margin-top: 20px;
-  margin-bottom: 50px;
 }
 
 .top-padded {
@@ -186,27 +163,14 @@ html,body {
   background-color: #080d13;
 }
 
-#highlights h5 {
-  padding-top: 20px;
-  color: #00b8d1;
+#landing-projects {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-#highlights p {
-  color: #007b8c;
+@media (max-width: 767px) {
+  .shrink {
+    font-size: 40px;
+  }
 }
-
-#highlights hr {
-  border-color: #00e1ff;
-  max-width: 5%;
-}
-
-.video {
-  max-width: 100%;
-  padding-bottom: 50px;
-}
-
-.row {
-  margin: 0px;
-}
-
-
