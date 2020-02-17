@@ -22,9 +22,10 @@
       <h2>Projects</h2>
     </div>
     <div class="section-content row">
+    <% @repos.each do |repo| %>
       <div class="col-md-4">
         <div class="box">
-          <a target="_blank" href="https://github.com/L4r1k/L4r1k-Blog">
+          <a target="_blank" href="<%= repo.html_url %>">
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
               <line class="top" x1="0" y1="0" x2="640" y2="0"></line>
               <line class="left" x1="0" y1="0" x2="0" y2="480"></line>
@@ -34,39 +35,11 @@
           </a>
         </div>
         <hr>
-        <h5>L4r1k-Blog</h5>
-        <p>Blog Site Repo</p>
+        <h5><%= repo.name %></h5>
+        <p><%= repo.description %></p>
+        <p>Updated at: <%= repo.updated_at %></p>
       </div>
-      <div class="col-md-4">
-        <div class="box">
-          <a target="_blank" href="https://github.com/L4r1k/L4r1k-Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-              <line class="top" x1="0" y1="0" x2="640" y2="0"></line>
-              <line class="left" x1="0" y1="0" x2="0" y2="480"></line>
-              <line class="bottom" x1="-640" y1="240" x2="640" y2="240"></line>
-              <line class="right" x1="320" y1="-480" x2="320" y2="480"></line>
-            </svg>
-          </a>
-        </div>
-        <hr>
-        <h5>L4r1k-Blog</h5>
-        <p>Blog Site Repo</p>
-      </div>
-      <div class="col-md-4">
-        <div class="box">
-          <a target="_blank" href="https://github.com/L4r1k/L4r1k-Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-              <line class="top" x1="0" y1="0" x2="640" y2="0"></line>
-              <line class="left" x1="0" y1="0" x2="0" y2="480"></line>
-              <line class="bottom" x1="-640" y1="240" x2="640" y2="240"></line>
-              <line class="right" x1="320" y1="-480" x2="320" y2="480"></line>
-            </svg>
-          </a>
-        </div>
-        <hr>
-        <h5>L4r1k-Blog</h5>
-        <p>Blog Site Repo</p>
-      </div>
+    <% end  %>
     </div>
   </div>
 </section>

@@ -29,6 +29,9 @@ gem 'travis'
 # Integrate font-awesome into erb code ( <%= fa_icon ... %> )
 gem 'font_awesome5_rails'
 
+# Octokit Github API Gem
+gem 'octokit', '~> 4.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
