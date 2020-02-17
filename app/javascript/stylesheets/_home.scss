@@ -52,7 +52,7 @@ html,body {
 
 // #large-header is used by animation code. height is set in JS
 .parallax-overlay {
-  border-bottom: 1px solid #00e1ff;
+  border-bottom: 1px solid rgba(0, 49, 62, 0.9);
   background-color: rgba(8, 13, 19, 0.9);
   width: 100%;
   height: 100%;
@@ -116,8 +116,8 @@ html,body {
 }
 
 .section-box {
-  border-bottom: 1px solid #00e1ff;
-  background-color: #000000;
+  border-bottom: 1px solid rgba(0, 49, 62, 0.9);
+  //background-color: #000000;
   text-align: center;
 }
 
@@ -160,7 +160,7 @@ html,body {
 }
 
 .box-anim {
-  background-color: #080d13;
+  //background-color: #1c3045;
 }
 
 h2 {
@@ -206,4 +206,108 @@ ul, li {
   .shrink {
     font-size: 40px;
   }
+}
+
+body {
+  background-color: #1d1d1d;
+}
+
+.row {
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+// Box Shit
+.box {
+  width: 320px;
+  height: 240px;
+  position: relative;
+  background: rgba(255,255,255,1);
+  display: inline-block;
+  margin: 0 -15px;
+  cursor: pointer;
+  color: #2c3e50;
+  box-shadow: inset 0 0 0 3px #2c3e50;
+  -webkit-transition: background 0.4s 0.5s;
+  transition: background 0.4s 0.5s;
+}
+
+.box svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box-anim .box:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+.box-anim .box {
+  background: rgba(0,0,0,0);
+  color: #fff;
+  box-shadow: none;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.box:hover {
+  background: rgba(255,255,255,0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.box:hover svg line {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.box svg line {
+  stroke-width: 3;
+  stroke: #00e1ff;
+  fill: none;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+
+.box-anim .box svg line {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.box-anim .box:hover svg line {
+  stroke-width: 5;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.box:hover svg line.top {
+  -webkit-transform: translateX(-320px);
+  transform: translateX(-320px);
+}
+
+.box svg line.top, .box svg line.bottom {
+  stroke-dasharray: 320 0 40 240;
+}
+
+.box:hover svg line.bottom {
+  -webkit-transform: translateX(320px);
+  transform: translateX(320px);
+}
+
+.box:hover svg line.left {
+  -webkit-transform: translateY(-240px);
+  transform: translateY(-240px);
+}
+
+.box svg line.left, .box svg line.right {
+  stroke-dasharray: 240 0 40 160;
+}
+
+.box:hover svg line.right {
+  -webkit-transform: translateY(240px);
+  transform: translateY(240px);
 }
