@@ -9,3 +9,4 @@
     - `crontab -l` to list cron jobs
     - remember to restart the cron service after updating the cron tab
         - `sudo service cron restart`
+- Use `bundle exec wheneverize .` to generated `config/schedule.rb` file
