@@ -32,6 +32,9 @@ gem 'font_awesome5_rails'
 # Octokit Github API Gem
 gem 'octokit', '~> 4.0'
 
+# Cron job gem
+gem 'whenever', require: false
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
