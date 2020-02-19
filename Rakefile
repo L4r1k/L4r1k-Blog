@@ -4,3 +4,6 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+# Gemoji
+load 'tasks/emoji.rake'
