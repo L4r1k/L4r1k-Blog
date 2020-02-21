@@ -155,8 +155,16 @@ html,body {
 
 .section-content {
   padding-top: 50px;
-  font-family: 'Orbitron', sans-serif;
-  color: #00e1ff;
+  padding-bottom: 30px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  color: #919699;
+}
+
+.section-content h5 {
+  font-family: 'Titillium Web', sans-serif;
+  //color: #00e1ff;
+  font-weight: 900;
 }
 
 .box-anim {
@@ -240,6 +248,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url("https://github.com/L4r1k.png");
+  background-size: 100%;
 }
 
 .box-anim .box:hover {
