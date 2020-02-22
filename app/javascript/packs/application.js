@@ -37,7 +37,7 @@ $(document).on('turbolinks:load', function() {
 
     (function() {
 
-        var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+        var width, height, headerOverlay, canvas, ctx, points, target, animateHeader = true;
 
         // Main
         initHeader();
@@ -46,11 +46,12 @@ $(document).on('turbolinks:load', function() {
 
         function initHeader() {
             width = Math.min(window.innerWidth, document.documentElement.clientWidth);
-            height = window.innerHeight;
+            //height = window.innerHeight;
+            height = 335;
             target = {x: width/2, y: height/2};
 
-            largeHeader = document.getElementById('large-header');
-            largeHeader.style.height = height+'px';
+            headerOverlay = document.getElementById('header-overlay');
+            //headerOverlay.style.height = height+'px';
 
             canvas = document.getElementById('dot-canvas');
             canvas.width = width;
@@ -136,8 +137,9 @@ $(document).on('turbolinks:load', function() {
 
         function resize() {
             width = Math.min(window.innerWidth, document.documentElement.clientWidth);
-            height = window.innerHeight;
-            largeHeader.style.height = height+'px';
+            //height = window.innerHeight;
+            height = 335;
+            headerOverlay.style.height = height+'px';
             canvas.width = width;
             canvas.height = height;
         }
