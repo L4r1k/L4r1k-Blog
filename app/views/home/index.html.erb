@@ -1,4 +1,28 @@
 <header id="landing-top">
+  <div id="landing-social-panel">
+    <ul>
+      <li>
+        <a target="_blank" href="https://www.github.com/L4r1k">
+          <i class="fab fa-github-square"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.linkedin.com/in/ciaranobrien2/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="#">
+          <i class="fab fa-btc"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="#">
+          <i class="fas fa-rss-square"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
   <div id="header-container">
     <div class="parallax-background"></div>
     <div id="header-overlay" class="parallax-overlay">
@@ -6,7 +30,7 @@
       <div class="container align-items-center h-100">
         <div class="header-table">
           <div class="header-title">
-            <h1 class="display-4 shrink">L4r1k Blog</h1>
+            <h1 class="display-4 shrink">L4r1k</h1>
             <div id="typing-node"></div>
             <br>
           </div>
@@ -16,55 +40,34 @@
   </div>
 </header>
 
-<section id="landing-projects" class="section-box box-anim">
-  <div class="container">
-    <div class="section-title">
-      <h2>Recent Projects</h2>
-    </div>
-    <div class="section-content row">
-    <% @repos.each do |repo| %>
-      <div class="col-md-4">
-        <div class="box">
-          <a target="_blank" href="<%= repo.html_url %>">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-image: url(<%= repo.download_url %>)">
-              <line class="top" x1="0" y1="0" x2="640" y2="0"></line>
-              <line class="left" x1="0" y1="0" x2="0" y2="480"></line>
-              <line class="bottom" x1="-640" y1="240" x2="640" y2="240"></line>
-              <line class="right" x1="320" y1="-480" x2="320" y2="480"></line>
-            </svg>
-          </a>
-        </div>
-        <hr>
-        <h5><%= repo.name %></h5>
-        <p><%= repo.description %></p>
-        <sub>Last updated at: <%= repo.repo_updated_at %></sub>
+<% if @repos %>
+  <section id="landing-projects" class="section-box box-anim">
+    <div class="container">
+      <div class="section-title">
+        <h2>Recent Projects</h2>
       </div>
-    <% end  %>
-    </div>
-  </div>
-</section>
-
-<footer id="landing-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-      </div>
-      <div class="col-sm-6">
-        <ul class="social-networks text-right">
-          <li>
-            <a target="_blank" href="https://www.github.com/L4r1k">
-              <i class="fab fa-github-square"></i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/ciaranobrien2/">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-        </ul>
+      <div class="section-content row">
+        <% @repos.each do |repo| %>
+          <div class="col-md-4">
+            <div class="box">
+              <a target="_blank" href="<%= repo.html_url %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-image: url(<%= repo.download_url %>)">
+                  <line class="top" x1="0" y1="0" x2="640" y2="0"></line>
+                  <line class="left" x1="0" y1="0" x2="0" y2="480"></line>
+                  <line class="bottom" x1="-640" y1="240" x2="640" y2="240"></line>
+                  <line class="right" x1="320" y1="-480" x2="320" y2="480"></line>
+                </svg>
+              </a>
+            </div>
+            <hr>
+            <h5><%= repo.name %></h5>
+            <p><%= repo.description %></p>
+            <sub>Last updated at: <%= repo.repo_updated_at %></sub>
+          </div>
+        <% end  %>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
+<% end %>
 
 <%= javascript_pack_tag 'typing' %>

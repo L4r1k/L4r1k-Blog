@@ -32,6 +32,9 @@ $(document).on('turbolinks:load', function() {
                 easing: 'swing',
                 speed: 1200
             });
+
+            // Enable scrollspy
+            $('body').scrollspy({ target: '#main-navbar' })
         }
     });
 

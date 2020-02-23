@@ -55,7 +55,7 @@ a.nav-link:hover:after {
   transition: all 0.3s ease-out;
 }
 
-li.nav-item {
+a.nav-link {
   //width: 20%;
   display: block;
   //margin-top: 2px;
@@ -73,7 +73,7 @@ li.nav-item:hover {
   //margin-bottom: 6px;
 }
 
-.fixed-top .navbar-nav li:not(.disabled):before {
+.fixed-top .navbar-nav li:not(.disabled) a.nav-link:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -86,12 +86,14 @@ li.nav-item:hover {
   height: 2px;
 }
 
-.fixed-top .navbar-nav li:not(.disabled):hover:before, .fixed-top .navbar-nav li:not(.disabled).active:before {
+.fixed-top .navbar-nav li:not(.disabled) a.nav-link:hover:before, .fixed-top .navbar-nav li:not(.disabled) a.active:before {
   bottom: -4px;
+  left: 0;
+  right: 0;
   opacity: 1;
 }
 
-.fixed-top .navbar-nav li:not(.disabled) {
+.fixed-top .navbar-nav li:not(.disabled) a.nav-link {
   position: relative;
 }
 

@@ -17,8 +17,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#main-navbar" data-offset="0">
   <%= render "shared/navbar" %>
   <%= yield %>
+  <%= render "shared/footer" %>
   </body>
 </html>
