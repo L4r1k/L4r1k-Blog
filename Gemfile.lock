@@ -261,7 +261,7 @@ GEM
     turbolinks-source (5.2.0)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     url (0.3.2)
     web-console (4.0.1)
